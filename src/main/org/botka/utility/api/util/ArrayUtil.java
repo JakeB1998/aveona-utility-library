@@ -322,6 +322,31 @@ public class ArrayUtil {
 
 		return arr;
 	}
+	
+	/**
+	 * Combines two arrays.
+	 * 
+	 * @param arr1 First array
+	 * @param arr2 Second array
+	 * @return concated array
+	 */
+	public static String[] concat(String[] arr1, String[] arr2) {
+		String[] arr = null;
+		if (arr1 != null && arr2 != null) {
+			arr = new String[arr1.length + arr2.length];
+			int index = 0;
+			for (int i = 0; i < arr1.length; i++) {
+				arr[index] = arr1[i];
+				index++;
+			}
+
+			for (int i = 0; i < arr2.length; i++) {
+				arr[index] = arr2[i];
+				index++;
+			}
+		}
+		return arr;
+	}
 
 	/**
 	 * Combines two arrays.
